@@ -1,78 +1,239 @@
 import Link from "next/link";
-import { ArrowRight, LayoutDashboard, Database, Users } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-gray-900 to-black text-white">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-800 bg-gradient-to-b from-zinc-800/30 pb-6 pt-8 backdrop-blur-2xl lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-800/30 lg:p-4 lg:dark:bg-zinc-800/30">
-          GOLDBACKBOND AGENCY
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-black via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://goldbackbond.com"
+    <main className="min-h-screen bg-[#0d1321] text-white">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d1321]/90 backdrop-blur-md border-b border-[rgba(197,160,89,0.2)]">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold text-[#C5A059] tracking-wider">Goldbackbond Inc.</div>
+          <a 
+            href="https://calendly.com/sydney-goldbackbond"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-5 py-2 border border-[#C5A059] text-[#C5A059] rounded-lg hover:bg-[#C5A059] hover:text-[#0d1321] transition-all text-sm font-semibold"
           >
-            By{' '}
-            <span className="font-bold text-gold-500">GoldbackBond</span>
+            Book a Call
           </a>
         </div>
-      </div>
+      </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-gold-400 before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-gold-200 after:via-gold-500 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-gold-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <h1 className="text-6xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-gold-200 to-gold-600 drop-shadow-sm sm:text-8xl">
-          CRM <br /> SUITE
-        </h1>
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left gap-8">
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
-          <h2 className="mb-3 text-2xl font-semibold flex items-center gap-2">
-            <Users className="w-6 h-6 text-gold-500" />
-            Clients
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Manage client relationships, profiles, and history in one secure vault.
-          </p>
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(197,160,89,0.03)_1px,transparent_1px),linear-gradient(rgba(197,160,89,0.03)_1px,transparent_1px)] bg-[60px_60px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div>
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-white to-[#C5A059] bg-clip-text text-transparent">
+                Institutional Credit Facility
+              </span>
+              <br />& Strategic Liquidity Partnership
+            </h1>
+            <p className="text-xl text-[#C5A059] font-medium mb-4">Class A Secured Debentures Collateral Proposal</p>
+            <p className="text-lg text-gray-400 mb-8 max-w-lg">
+              A premier banking arrangement bridging gold-backed debt instruments with institutional liquidity infrastructure.
+            </p>
+            <div className="flex flex-col gap-4">
+              <a 
+                href="https://calendly.com/sydney-goldbackbond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C5A059] to-[#a88845] text-[#0d1321] rounded-lg font-bold text-lg hover:shadow-[0_10px_30px_rgba(197,160,89,0.3)] transition-all transform hover:-translate-y-1"
+              >
+                <span className="text-xl">📞</span>
+                Book a Call Now
+              </a>
+              <p className="text-sm text-gray-500">Connect with Sydney at Goldbackbond</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 text-center hover:border-[#C5A059] transition-all">
+              <div className="text-3xl font-bold text-[#C5A059] mb-2">$100M</div>
+              <div className="text-sm text-gray-400">Total Facility Size</div>
+            </div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 text-center hover:border-[#C5A059] transition-all">
+              <div className="text-3xl font-bold text-[#C5A059] mb-2">$20-50M</div>
+              <div className="text-sm text-gray-400">Initial Pledge</div>
+            </div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 text-center hover:border-[#C5A059] transition-all">
+              <div className="text-3xl font-bold text-[#C5A059] mb-2">8-10%</div>
+              <div className="text-sm text-gray-400">Target Yield</div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
-          <h2 className="mb-3 text-2xl font-semibold flex items-center gap-2">
-            <LayoutDashboard className="w-6 h-6 text-gold-500" />
-            Deals
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Track pipelines, deal stages, and revenue forecasts with precision.
+      {/* The Opportunity */}
+      <section className="py-24 bg-[#0d1321]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-4">The Opportunity</h2>
+          <p className="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-16">
+            Partner with Goldbackbond Inc. to access a high-value traditional finance arrangement secured by institutional-grade collateral.
           </p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 hover:border-[#C5A059] transition-all hover:-translate-y-1">
+              <div className="text-5xl mb-6">💵</div>
+              <h3 className="text-xl font-semibold mb-4">Class A Secured Debentures</h3>
+              <p className="text-gray-400">$100 per unit par value, Bloomberg-listed for global visibility and standardized pricing.</p>
+            </div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 hover:border-[#C5A059] transition-all hover:-translate-y-1">
+              <div className="text-5xl mb-6">🏦</div>
+              <h3 className="text-xl font-semibold mb-4">Conservative LTV Structure</h3>
+              <p className="text-gray-400">Initial $20M-$50M pledge scaling to $100M with conservative loan-to-value ratios.</p>
+            </div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 hover:border-[#C5A059] transition-all hover:-translate-y-1">
+              <div className="text-5xl mb-6">🛡️</div>
+              <h3 className="text-xl font-semibold mb-4">USDGB Trust Fund</h3>
+              <p className="text-gray-400">Secured by Federal Reserve Gold Certificate-backed assets, IP, and corporate shares.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
-          <h2 className="mb-3 text-2xl font-semibold flex items-center gap-2">
-            <Database className="w-6 h-6 text-gold-500" />
-            Assets
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Organize digital assets, contracts, and agency resources.
+      {/* Value Proposition */}
+      <section className="py-24 bg-[rgba(26,31,46,0.5)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Value Proposition for Your Institution</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-[rgba(26,31,46,0.8)] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A059]"></div>
+              <div className="absolute top-2 right-6 text-6xl font-bold text-[rgba(197,160,89,0.15)]">01</div>
+              <h3 className="text-lg font-semibold mb-3 pr-16">Facility Intermediation Fees</h3>
+              <p className="text-gray-400 text-sm">Immediate revenue from brokering the credit line with Tier-1 liquidity providers.</p>
+            </div>
+            <div className="bg-[rgba(26,31,46,0.8)] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A059]"></div>
+              <div className="absolute top-2 right-6 text-6xl font-bold text-[rgba(197,160,89,0.15)]">02</div>
+              <h3 className="text-lg font-semibold mb-3 pr-16">Consistent Trading Revenue</h3>
+              <p className="text-gray-400 text-sm">Reliable commission and swap fee revenue from ongoing trading operations.</p>
+            </div>
+            <div className="bg-[rgba(26,31,46,0.8)] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A059]"></div>
+              <div className="absolute top-2 right-6 text-6xl font-bold text-[rgba(197,160,89,0.15)]">03</div>
+              <h3 className="text-lg font-semibold mb-3 pr-16">Client Funnel</h3>
+              <p className="text-gray-400 text-sm">Business clients mandated to use your firm's specific brokerage services.</p>
+            </div>
+            <div className="bg-[rgba(26,31,46,0.8)] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A059]"></div>
+              <div className="absolute top-2 right-6 text-6xl font-bold text-[rgba(197,160,89,0.15)]">04</div>
+              <h3 className="text-lg font-semibold mb-3 pr-16">Service Integration</h3>
+              <p className="text-gray-400 text-sm">Full suite adoption creating organic AUM growth flywheel.</p>
+            </div>
+            <div className="bg-[rgba(26,31,46,0.8)] border border-[rgba(197,160,89,0.2)] rounded-xl p-6 relative overflow-hidden md:col-span-2">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A059]"></div>
+              <div className="absolute top-2 right-6 text-6xl font-bold text-[rgba(197,160,89,0.15)]">05</div>
+              <h3 className="text-lg font-semibold mb-3 pr-16">Cross-Collateral Protection</h3>
+              <p className="text-gray-400 text-sm">Over-collateralized structure with conservative LTV ratios ensuring facility remains secure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance */}
+      <section className="py-24 bg-[#0d1321]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Compliance & Operational Readiness</h2>
+          
+          <div className="max-w-3xl mx-auto space-y-4">
+            <div className="flex items-start gap-5 bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6">
+              <div className="w-10 h-10 bg-[rgba(197,160,89,0.2)] rounded-full flex items-center justify-center text-[#C5A059] shrink-0">✓</div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Trust Agreement & Indemnification</h3>
+                <p className="text-gray-400 text-sm">Finalized and elevated to High Priority for immediate fund administration.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-5 bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6">
+              <div className="w-10 h-10 bg-[rgba(197,160,89,0.2)] rounded-full flex items-center justify-center text-[#C5A059] shrink-0">✓</div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Master Use of Funds</h3>
+                <p className="text-gray-400 text-sm">Singular audited schedule aligning PPM, Trust Agreement, and Escrow instructions.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-5 bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6">
+              <div className="w-10 h-10 bg-[rgba(197,160,89,0.2)] rounded-full flex items-center justify-center text-[#C5A059] shrink-0">✓</div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Organization Chart</h3>
+                <p className="text-gray-400 text-sm">Full transparency back to the Parent entity for KYC/AML requirements.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-5 bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-xl p-6">
+              <div className="w-10 h-10 bg-[rgba(197,160,89,0.2)] rounded-full flex items-center justify-center text-[#C5A059] shrink-0">✓</div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Audited Financials</h3>
+                <p className="text-gray-400 text-sm">Prepared and ready for submission to bank risk departments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Objectives */}
+      <section className="py-24 bg-[rgba(26,31,46,0.5)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Strategic Objectives</h2>
+          
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 text-center min-w-[200px] hover:border-[#C5A059] transition-all">
+              <div className="text-4xl mb-4">↻</div>
+              <h3 className="font-semibold mb-2">Revolving Credit Line</h3>
+              <p className="text-sm text-gray-400">Flexible drawdown structure</p>
+            </div>
+            <div className="text-3xl text-[#C5A059]">→</div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 text-center min-w-[200px] hover:border-[#C5A059] transition-all">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="font-semibold mb-2">Debt Service</h3>
+              <p className="text-sm text-gray-400">Protocol yield + trading profits</p>
+            </div>
+            <div className="text-3xl text-[#C5A059]">→</div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 text-center min-w-[200px] hover:border-[#C5A059] transition-all">
+              <div className="text-4xl mb-4">💎</div>
+              <h3 className="font-semibold mb-2">Treasury Strategy</h3>
+              <p className="text-sm text-gray-400">Maintain Hold on core assets</p>
+            </div>
+            <div className="text-3xl text-[#C5A059]">→</div>
+            <div className="bg-[#1a1f2e] border border-[rgba(197,160,89,0.2)] rounded-2xl p-8 text-center min-w-[200px] hover:border-[#C5A059] transition-all">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="font-semibold mb-2">Global Expansion</h3>
+              <p className="text-sm text-gray-400">Liquidity for growth</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-gradient-to-b from-[#0d1321] to-[rgba(197,160,89,0.05)]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Establish a Strategic Partnership?</h2>
+          <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+            Schedule a call with Sydney to discuss the phased onboarding process and explore how this opportunity can benefit your institution.
           </p>
+          
+          <a 
+            href="https://calendly.com/sydney-goldbackbond"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#C5A059] to-[#a88845] text-[#0d1321] rounded-lg font-bold text-xl hover:shadow-[0_10px_30px_rgba(197,160,89,0.3)] transition-all transform hover:-translate-y-1 mb-12"
+          >
+            <span className="text-2xl">📅</span>
+            Book a Call Now
+          </a>
+          
+          <div className="text-gray-400">
+            <p className="text-lg mb-2"><span className="text-[#C5A059] font-semibold">Sydney</span> | Goldbackbond Inc.</p>
+            <p className="mb-1">1301 Fannin St #2440, Houston, TX 77002</p>
+            <p>sydney@goldbackbond.com</p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full flex justify-center">
-        <button className="px-8 py-4 bg-gold-600 hover:bg-gold-500 text-black font-bold rounded-full transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(212,165,35,0.3)]">
-          Enter Dashboard <ArrowRight className="w-5 h-5" />
-        </button>
-      </div>
+      {/* Footer */}
+      <footer className="py-8 border-t border-[rgba(197,160,89,0.2)] text-center text-gray-500 text-sm">
+        <div className="max-w-7xl mx-auto px-6">
+          © 2026 Goldbackbond Inc. | Ebisu Securities - Broker-Dealer Relations
+        </div>
+      </footer>
     </main>
   );
 }
